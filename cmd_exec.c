@@ -195,12 +195,10 @@ return (1);
 }
 else
 {
-do
-{
+do {
 wpd = waitpid(pd, &state, WUNTRACED);
 } while (!WIFEXITED(state) && !WIFSIGNALED(state));
 }
-
 datash->status = state / 256;
 return (1);
 }
